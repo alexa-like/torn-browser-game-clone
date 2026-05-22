@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torn Clone - Browser MMORPG</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="logo">
+                <h1>Torn Clone</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">City</a></li>
+                    <li><a href="#">Items</a></li>
+                    <li><a href="#">Market</a></li>
+                    <li><a href="#">Hospital</a></li>
+                    <li><a href="#">Jail</a></li>
+                </ul>
+            </nav>
+            <div class="user-info">
+                <div class="user-avatar">
+                    <img src="https://picsum.photos/seed/avatar1/50/50.jpg" alt="User Avatar">
+                </div>
+                <div class="user-name">Player123</div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="stats-panel">
+                <h2>Player Stats</h2>
+                <div class="stat-item">
+                    <span class="stat-label">Money:</span>
+                    <span class="stat-value" id="money">$1,250,000</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Energy:</span>
+                    <div class="energy-bar">
+                        <div class="energy-fill" id="energy-fill" style="width: 75%"></div>
+                    </div>
+                    <span class="stat-value" id="energy">75/100</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Nerve:</span>
+                    <div class="nerve-bar">
+                        <div class="nerve-fill" id="nerve-fill" style="width: 50%"></div>
+                    </div>
+                    <span class="stat-value" id="nerve">50/100</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Happiness:</span>
+                    <div class="happiness-bar">
+                        <div class="happiness-fill" id="happiness-fill" style="width: 60%"></div>
+                    </div>
+                    <span class="stat-value" id="happiness">60/100</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Level:</span>
+                    <span class="stat-value" id="level">42</span>
+                </div>
+            </div>
+
+            <div class="actions-panel">
+                <h2>Actions</h2>
+                <div class="action-grid">
+                    <button class="action-btn crime-btn" data-action="crime">
+                        <span class="icon">🔫</span>
+                        <span>Commit Crime</span>
+                    </button>
+                    <button class="action-btn gym-btn" data-action="gym">
+                        <span class="icon">💪</span>
+                        <span>Gym</span>
+                    </button>
+                    <button class="action-btn hospital-btn" data-action="hospital">
+                        <span class="icon">🏥</span>
+                        <span>Hospital</span>
+                    </button>
+                    <button class="action-btn job-btn" data-action="job">
+                        <span class="icon">💼</span>
+                        <span>Job</span>
+                    </button>
+                    <button class="action-btn travel-btn" data-action="travel">
+                        <span class="icon">✈️</span>
+                        <span>Travel</span>
+                    </button>
+                    <button class="action-btn items-btn" data-action="items">
+                        <span class="icon">🎒</span>
+                        <span>Items</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="market-panel">
+                <h2>Market</h2>
+                <div class="market-items">
+                    <div class="market-item">
+                        <div class="item-image">
+                            <img src="https://picsum.photos/seed/item1/80/80.jpg" alt="Weapon">
+                        </div>
+                        <div class="item-info">
+                            <h3>Basic Weapon</h3>
+                            <p>Damage: 15-25</p>
+                            <div class="item-price">$25,000</div>
+                        </div>
+                        <button class="buy-btn">Buy</button>
+                    </div>
+                    <div class="market-item">
+                        <div class="item-image">
+                            <img src="https://picsum.photos/seed/item2/80/80.jpg" alt="Armor">
+                        </div>
+                        <div class="item-info">
+                            <h3>Basic Armor</h3>
+                            <p>Defense: 10-20</p>
+                            <div class="item-price">$15,000</div>
+                        </div>
+                        <button class="buy-btn">Buy</button>
+                    </div>
+                    <div class="market-item">
+                        <div class="item-image">
+                            <img src="https://picsum.photos/seed/item3/80/80.jpg" alt="Drug">
+                        </div>
+                        <div class="item-info">
+                            <h3>Energy Pill</h3>
+                            <p>+25 Energy</p>
+                            <div class="item-price">$5,000</div>
+                        </div>
+                        <button class="buy-btn">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-panel">
+                <h2>Global Chat</h2>
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message">
+                        <span class="user">Player456:</span>
+                        <span class="text">Anyone selling weapons?</span>
+                    </div>
+                    <div class="message">
+                        <span class="user">Gamer789:</span>
+                        <span class="text">Looking for a gym partner</span>
+                    </div>
+                    <div class="message">
+                        <span class="user">Newbie123:</span>
+                        <span class="text">How do I make money fast?</span>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chat-input" placeholder="Type your message...">
+                    <button id="send-btn">Send</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2023 Torn Clone. Not affiliated with Torn.com.</p>
+                <div class="footer-links">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Support</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="notification" id="notification">
+        <span id="notification-text"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
